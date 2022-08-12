@@ -1,0 +1,52 @@
+body {
+    display: grid;
+    grid-template: 10rem repeat(3, 1fr) / 20rem repeat(3, 1fr);
+    height: 100vh;
+}
+.header {
+    background-color: white;
+    grid-area: 1/2/1/5;
+}
+.sidebar {
+    background-color: rgb(128, 128, 255);
+    grid-area: 1/1/5/1;
+}
+.main-content {
+    background-color: lightgray;
+    grid-area: 2/2/5/5;
+
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    padding: 1rem;
+}
+.project-section {
+    grid-area: 1/1/3/3;
+
+    display: grid;
+    grid-template: repeat(1, 200px) / repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    overflow: auto;
+    gap: 1rem;
+    padding-right: 1rem;
+
+    min-width: 300px;
+}
+.project-section::-webkit-scrollbar {
+    display: none;
+}
+.project {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+}
+.anouncements {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+}
+.trending {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+    margin-top: 1rem;
+}
