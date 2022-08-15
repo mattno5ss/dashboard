@@ -1,3 +1,6 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
 body {
     display: grid;
     grid-template: 10rem repeat(3, 1fr) / 20rem repeat(3, 1fr);
@@ -6,10 +9,91 @@ body {
 .header {
     background-color: white;
     grid-area: 1/2/1/5;
+
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    padding: 1rem 2rem;
+}
+.search {
+    display: grid;
+    grid-template: 1fr / 32px 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.search-btn {
+    height: 32px;
+    width: 32px;
+}
+.search-bar {
+    border: none;
+    border-radius: 16px;
+    height: 24px;
+    background-color: lightgray;
+}
+.user {
+    display: grid;
+    grid-template: 1fr / 64px 64px 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.user>* {
+    border: 1px solid black;
+}
+.notification {
+    height: 32px;
+    width: 32px;
+}
+.pfp-small {
+    height: 48px;
+    width: 48px;
+}
+.greeting {
+    display: grid;
+    grid-template: 1fr 1fr / 64px 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.greeting > .name {
+    white-space: nowrap;
+}
+.greeting>* {
+    border: 1px solid black;
+}
+.pfp {
+    grid-area: 1/1/3/2;
+    height: 64px;
+    width: 64px;
+}
+.buttons{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    place-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.header-btn {
+    background-color: blue;
+    border: none;
+    border-radius: 18px;
+    width: 6rem;
+    height: 2rem;
+    color: whitesmoke;
 }
 .sidebar {
     background-color: rgb(128, 128, 255);
     grid-area: 1/1/5/1;
+    color: whitesmoke;
+    padding: 1rem;
+}
+.sidebar-list {
+    padding: 0;
+    list-style: none;
+}
+.sidebar-item {
+    font-size: 20px;
+    height: 32px;
+    margin-top: 1rem;
 }
 .main-content {
     background-color: lightgray;
@@ -37,7 +121,9 @@ body {
 .project {
     background-color: whitesmoke;
     border-radius: 10px;
+    border-left: 10px solid orange;
     box-shadow: 2px 2px 2px gray;
+    padding: 1rem;
 }
 .anouncements {
     background-color: whitesmoke;
@@ -49,4 +135,12 @@ body {
     border-radius: 10px;
     box-shadow: 2px 2px 2px gray;
     margin-top: 1rem;
+
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+.social-trend {
+    background-color: gray;
+    border-radius: 10px;
 }
