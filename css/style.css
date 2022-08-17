@@ -3,7 +3,7 @@
 }
 body {
     display: grid;
-    grid-template: 10rem repeat(3, 1fr) / 15rem repeat(3, 1fr);
+    grid-template: 10rem repeat(3, 1fr) / 17rem repeat(3, 1fr);
     height: 100vh;
 }
 .header {
@@ -85,12 +85,11 @@ body {
     background-color: lightslategray;
     grid-area: 1/1/5/1;
     color: whitesmoke;
-    padding: 0rem;
+    white-space: nowrap;
 }
 .sidebar > .heading {
     font-size: 32px;
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding: 0.5rem;
 }
 .sidebar-list {
     padding: 0;
@@ -100,12 +99,23 @@ body {
 .sidebar-item-blank {
     font-size: 20px;
     height: 32px;
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding: 0.5rem 1rem;
 }
-.sidebar-item > a {
+.sidebar a {
     text-decoration: none;
     color: whitesmoke;
+    display: inline-block;
+}
+.heading-icon {
+    vertical-align: middle;
+}
+.sidebar-icon {
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+span {
+    vertical-align: middle;
 }
 .sidebar-item:hover {
     background-color: rgb(80, 90, 100);
