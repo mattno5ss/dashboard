@@ -14,7 +14,7 @@ body {
     box-shadow: 2px 2px 9px gray;
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
-    padding-left: 2rem; 
+    padding: 1rem 2rem; 
 }
 .search {
     display: grid;
@@ -32,12 +32,12 @@ body {
 }
 .user {
     display: grid;
-    grid-template: 1fr / 64px 64px 1fr;
-    gap: 0.5rem;
+    grid-template: 1fr / 32px 48px 1fr;
+    gap: 1rem;
     align-items: center;
-    justify-self: center;
+    justify-self: right;
 }
-.user > .name {
+.user .name {
     font-size: 20px;
     white-space: nowrap;
 }
@@ -45,22 +45,26 @@ body {
     height: 32px;
     width: 32px;
 }
-.pfp-small {
+.user .pfp {
     height: 48px;
     width: 48px;
 }
 .greeting {
     display: grid;
-    grid-template: 1fr 1fr / 64px 1fr;
+    grid-template: 1fr 1fr / 48px 1fr;
     align-items: center;
 }
-.greeting > * {
+.greeting * {
     white-space: nowrap;
 }
-.greeting > .name {
-    font-size: 28px;
+.greeting .greet {
+    padding-left: 0.5rem;
 }
-.pfp {
+.greeting .name {
+    font-size: 28px;
+    padding-left: 0.5rem;
+}
+.greeting .pfp {
     grid-area: 1/1/3/2;
     height: 48px;
     width: 48px;
@@ -69,8 +73,10 @@ body {
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
     place-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 0.5rem;
+    width: fit-content;
+    justify-self: right;
 }
 .header-btn {
     background-color: rgb(76, 76, 190);
@@ -117,9 +123,6 @@ body {
 span {
     vertical-align: middle;
 }
-.sidebar-item:hover {
-    background-color: rgb(80, 90, 100);
-}
 .main-content {
     background-color: lightgray;
     grid-area: 2/2/5/5;
@@ -134,7 +137,7 @@ span {
     grid-template: 3rem 1fr / 1fr;
     min-width: fit-content;
 }
-.project-section > .heading {
+.project-section .heading {
     padding-left: 1rem;
 }
 .projects {
@@ -186,9 +189,9 @@ span {
     display: grid;
     grid-template: 3rem 1fr / 1fr;
 }
-.project-section > .heading,
-.announcement-section > .heading,
-.trending-section > .heading {
+.project-section .heading,
+.announcement-section .heading,
+.trending-section .heading {
     font-size: 32px;
     height: 32px;
 }
@@ -243,6 +246,9 @@ span {
 .header-btn:active {
     transform: translate(2px, 2px);
     box-shadow: none;
+}
+.sidebar-item:hover {
+    background-color: rgb(80, 90, 100);
 }
 .flip-card:active .project {
     transform: rotateY(180deg);
