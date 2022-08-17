@@ -247,6 +247,10 @@ span {
     transform: translate(2px, 2px);
     box-shadow: none;
 }
+.search-bar:focus {
+    outline: none;
+    border: 2px solid lightslategray;
+}
 .sidebar-item:hover {
     background-color: rgb(80, 90, 100);
 }
